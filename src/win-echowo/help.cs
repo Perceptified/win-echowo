@@ -1,0 +1,21 @@
+namespace win_echowo {
+    public static class Help {
+        public static string HelpText() {
+            string helpText = @"
+            Usage: win-echowo [OPTIONS] [ARG ...]
+            Writes uwufied arguments to standard output.
+            -v, --version            show version    
+            -h, --help               display this help
+            ";
+            return helpText;
+        }
+        public static string VersionText() {
+            string versionText = @"
+            Version: 1637957034
+            Author: Markus Aigner
+            License: MIT License
+            ";
+            return versionText;
+        }
+    }
+}
