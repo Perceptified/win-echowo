@@ -11,7 +11,7 @@ namespace win_echowo {
         }
         public static string VersionText() {
             string versionText = @"
-            Version: 1637957034
+            Version: 1638056726
             Author: Markus Aigner
             License: MIT License
             ";
