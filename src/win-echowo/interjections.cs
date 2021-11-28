@@ -6,8 +6,8 @@ namespace win_echowo
     public static class Interjections
     {
         static string[] UWUism = {
-                "uwu",
-                "owo",
+                "UwU",
+                "OwO",
                 "^w^",
                 "murr...",
                 "nya!",
