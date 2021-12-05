@@ -16,7 +16,11 @@ namespace win_echowo
 
             foreach (KeyValuePair<string, string> keyValuePair in UWUisms)
             {
-                inputText = inputText.Replace(keyValuePair.Key, keyValuePair.Value);
+                Random rand = new Random();
+                int number = rand.Next(1,4);
+                if(number == 1) {
+                    inputText = inputText.Replace(keyValuePair.Key, keyValuePair.Value);
+                }
             }
             return inputText;
         }

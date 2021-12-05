@@ -6,6 +6,7 @@ namespace win_echowo {
             Writes uwufied arguments to standard output.
             -v, --version            show version    
             -h, --help               display this help
+            -g                       guarantees at least one UwU-Interjection
             ";
             return helpText;
         }

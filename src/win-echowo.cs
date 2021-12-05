@@ -6,11 +6,22 @@ namespace win_echowo
     // See https://aka.ms/new-console-template for more information
     public class win_echowo
     {
-        public static void Main(string[] args)
+        public static void Main(string[]args)
         {
+            // Test Input for running without arguments.
+            // string[] args = 
+            // { 
+            //     // "--guaranteed", "lolly", "ferry", "core", "derp", "anal", "covenant", "please", "prowling",
+            //     "neck", "time", "slime", "bulge", "paste", "puzzle", "nuzzle"
+            //     };
             string stdInput;
             bool guaranteed = false;
-            if (args.Length == 0 || (args.Length == 1 && args[0] == "-g" || args[0] == "--guaranteed"))
+            if (args[0] == "-g" || args[0] == "--guaranteed")
+            {
+                guaranteed = true;
+                args = args.Skip(1).ToArray();
+            }
+            if (args.Length == 0)
             {
                 while ((stdInput = Console.ReadLine()) != null)
                 {
@@ -32,11 +43,8 @@ namespace win_echowo
                 args = args.Skip(1).ToArray();
                 return;
             }
-            if (args[0] == "-g" || args[0] == "--guaranteed")
-            {
-                guaranteed = true;
-            }
             string inputText = String.Join(" ", args);
+            inputText = alteredWords.WordAltering(inputText);
             inputText = Replacements.UwuTransform(inputText);
             inputText = Interjections.UwuInterject(inputText, guaranteed);
             // Console.WriteLine(String.Join(" ", args));

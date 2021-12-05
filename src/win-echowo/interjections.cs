@@ -7,6 +7,9 @@ namespace win_echowo
     {
         static string[] UWUism = {
                 "UwU",
+                "^_^",
+                "~=[„_„]",
+                "(^U^)",
                 "OwO",
                 "^w^",
                 "murr...",
@@ -26,9 +29,28 @@ namespace win_echowo
             int number;
             List<int> indices = new List<int>();
             int currentIdx = 0;
+            if (guaranteed)
+            {
+                foreach (char c in inputText)
+                {
+                    // number = rand.Next(1, 7);
+                    currentIdx = inputText.IndexOf(c, currentIdx);
+                    if (c.ToString() == " ")
+                    {
+                        indices.Add(currentIdx);
+                    }
+                    if (c.ToString() == Environment.NewLine)
+                    {
+                        indices.Add(currentIdx);
+                    }
+                }
+                number = rand.Next(0, (indices.Count - 1));
+                inputText = inputText.Insert(indices[number], " " + pickRandomUwuism());
+            }
+            currentIdx = 0;
             foreach (char c in inputText)
             {
-                number = rand.Next(1, 7);
+                number = rand.Next(1, 10);
                 currentIdx = inputText.IndexOf(c, currentIdx);
                 if (c.ToString() == " ")
                 {
