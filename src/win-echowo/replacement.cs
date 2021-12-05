@@ -15,6 +15,8 @@ namespace win_echowo
             UWUisms.Add("nan", "nyan");
             UWUisms.Add("ma", "mya");
             UWUisms.Add("mam", "myam");
+            UWUisms.Add("pl", "pw");
+            UWUisms.Add("pr", "pw");
             foreach (KeyValuePair<string, string> keyValuePair in UWUisms)
             {
                 inputText = inputText.Replace(keyValuePair.Key, keyValuePair.Value);

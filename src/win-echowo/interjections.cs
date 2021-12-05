@@ -17,9 +17,10 @@ namespace win_echowo
                 "*wags tail*",
                 "nyea~",
                 "nyu...",
-                "rawr!"
+                "rawr!",
+                "*pounces*"
             };
-        public static string UwuInterject(string inputText)
+        public static string UwuInterject(string inputText, bool guaranteed)
         {
             Random rand = new Random();
             int number;
@@ -27,7 +28,7 @@ namespace win_echowo
             int currentIdx = 0;
             foreach (char c in inputText)
             {
-                number = rand.Next(1, 11);
+                number = rand.Next(1, 7);
                 currentIdx = inputText.IndexOf(c, currentIdx);
                 if (c.ToString() == " ")
                 {
